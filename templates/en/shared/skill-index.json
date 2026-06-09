@@ -1,0 +1,335 @@
+{
+  "version": "1.0.0",
+  "language": "en-US",
+  "description": "Parameterized Skill routing index for Agent Skill Router English templates.",
+  "manual_file": "Skill-Quick-Reference-EN.md",
+  "rules": {
+    "max_skills_per_task": 3,
+    "prefer_local_skills_first": true,
+    "never_load_all_skills": true,
+    "external_search_only_when_local_missing": true,
+    "programming_tasks_must_include": "{{PROGRAMMING_BASELINE_SKILL}}",
+    "skill_governance_tasks_must_include": "{{SKILL_GOVERNANCE_SKILL}}"
+  },
+  "parameters": {
+    "{{PROGRAMMING_BASELINE_SKILL}}": {
+      "default": "karpathy-guidelines",
+      "purpose": "Mandatory programming baseline for coding, refactoring, code review, architecture, tests, and technical planning."
+    },
+    "{{SKILL_GOVERNANCE_SKILL}}": {
+      "default": "skill-governance",
+      "purpose": "Skill creation, merging, deduplication, index maintenance, and external Skill review."
+    },
+    "{{DESIGN_SYSTEM_SKILL}}": {
+      "default": "design-system",
+      "purpose": "UI design systems, visual consistency, component guidelines, and design tokens."
+    },
+    "{{FRONTEND_PATTERNS_SKILL}}": {
+      "default": "frontend-patterns",
+      "purpose": "Frontend architecture, component patterns, and UI implementation."
+    },
+    "{{BROWSER_QA_SKILL}}": {
+      "default": "browser-qa",
+      "purpose": "Browser-based UI validation and visual QA."
+    },
+    "{{E2E_TESTING_SKILL}}": {
+      "default": "e2e-testing",
+      "purpose": "End-to-end testing workflow."
+    },
+    "{{TDD_WORKFLOW_SKILL}}": {
+      "default": "tdd-workflow",
+      "purpose": "Test-driven development workflow."
+    },
+    "{{VERIFICATION_LOOP_SKILL}}": {
+      "default": "verification-loop",
+      "purpose": "Build, test, and verification loop."
+    },
+    "{{SECURITY_REVIEW_SKILL}}": {
+      "default": "security-review",
+      "purpose": "Security review and risk analysis."
+    },
+    "{{SAFETY_GUARD_SKILL}}": {
+      "default": "safety-guard",
+      "purpose": "High-risk operation protection."
+    },
+    "{{API_DESIGN_SKILL}}": {
+      "default": "api-design",
+      "purpose": "API design and REST conventions."
+    },
+    "{{DATABASE_MIGRATIONS_SKILL}}": {
+      "default": "database-migrations",
+      "purpose": "Database schema changes and migration planning."
+    },
+    "{{POSTGRES_PATTERNS_SKILL}}": {
+      "default": "postgres-patterns",
+      "purpose": "PostgreSQL and compatible database patterns."
+    },
+    "{{DEPLOYMENT_PATTERNS_SKILL}}": {
+      "default": "deployment-patterns",
+      "purpose": "Deployment, rollback, health checks, and production readiness."
+    },
+    "{{DOCKER_PATTERNS_SKILL}}": {
+      "default": "docker-patterns",
+      "purpose": "Docker and Docker Compose patterns."
+    },
+    "{{BLUEPRINT_SKILL}}": {
+      "default": "blueprint",
+      "purpose": "Planning and task breakdown."
+    },
+    "{{ARCHITECTURE_DECISION_RECORDS_SKILL}}": {
+      "default": "architecture-decision-records",
+      "purpose": "Architecture decision records."
+    },
+    "{{HEXAGONAL_ARCHITECTURE_SKILL}}": {
+      "default": "hexagonal-architecture",
+      "purpose": "Hexagonal architecture and ports/adapters."
+    },
+    "{{AGENTIC_ENGINEERING_SKILL}}": {
+      "default": "agentic-engineering",
+      "purpose": "AI Agent engineering workflow."
+    },
+    "{{EVAL_HARNESS_SKILL}}": {
+      "default": "eval-harness",
+      "purpose": "Evaluation-driven development for agents."
+    }
+  },
+  "task_routes": [
+    {
+      "id": "programming",
+      "description": "Any task that writes, modifies, reviews, tests, or designs code.",
+      "triggers": [
+        "code",
+        "implement",
+        "refactor",
+        "bug",
+        "debug",
+        "review",
+        "API",
+        "database design",
+        "test",
+        "architecture",
+        "frontend",
+        "backend",
+        "DevOps automation",
+        "agent development"
+      ],
+      "required_skills": [
+        "{{PROGRAMMING_BASELINE_SKILL}}"
+      ],
+      "recommended_skills": [
+        "{{VERIFICATION_LOOP_SKILL}}",
+        "{{SECURITY_REVIEW_SKILL}}"
+      ]
+    },
+    {
+      "id": "ui_design_system",
+      "description": "UI, UX, visual language, design systems, component libraries, layout systems, and dashboard interfaces.",
+      "triggers": [
+        "UI",
+        "UX",
+        "design system",
+        "component library",
+        "visual guideline",
+        "dashboard UI",
+        "layout",
+        "prototype",
+        "design tokens"
+      ],
+      "required_skills": [],
+      "recommended_skills": [
+        "{{DESIGN_SYSTEM_SKILL}}",
+        "{{FRONTEND_PATTERNS_SKILL}}",
+        "{{BROWSER_QA_SKILL}}"
+      ],
+      "notes": "Add {{PROGRAMMING_BASELINE_SKILL}} only when implementation or code changes are required."
+    },
+    {
+      "id": "frontend",
+      "description": "Frontend implementation, UI components, client-side architecture, and browser interaction.",
+      "triggers": [
+        "frontend",
+        "React",
+        "Vue",
+        "Next.js",
+        "Nuxt",
+        "CSS",
+        "HTML",
+        "component",
+        "browser",
+        "responsive"
+      ],
+      "required_skills": [
+        "{{PROGRAMMING_BASELINE_SKILL}}"
+      ],
+      "recommended_skills": [
+        "{{FRONTEND_PATTERNS_SKILL}}",
+        "{{DESIGN_SYSTEM_SKILL}}",
+        "{{BROWSER_QA_SKILL}}",
+        "{{E2E_TESTING_SKILL}}"
+      ]
+    },
+    {
+      "id": "backend_api",
+      "description": "Backend services, API design, authentication, authorization, and service architecture.",
+      "triggers": [
+        "backend",
+        "API",
+        "REST",
+        "authentication",
+        "authorization",
+        "service",
+        "controller",
+        "endpoint"
+      ],
+      "required_skills": [
+        "{{PROGRAMMING_BASELINE_SKILL}}"
+      ],
+      "recommended_skills": [
+        "{{API_DESIGN_SKILL}}",
+        "{{SECURITY_REVIEW_SKILL}}"
+      ]
+    },
+    {
+      "id": "database",
+      "description": "Database schema, migrations, SQL, indexes, transactions, and data integrity.",
+      "triggers": [
+        "database",
+        "SQL",
+        "schema",
+        "migration",
+        "index",
+        "transaction",
+        "PostgreSQL",
+        "MySQL"
+      ],
+      "required_skills": [
+        "{{PROGRAMMING_BASELINE_SKILL}}"
+      ],
+      "recommended_skills": [
+        "{{DATABASE_MIGRATIONS_SKILL}}",
+        "{{POSTGRES_PATTERNS_SKILL}}",
+        "{{SECURITY_REVIEW_SKILL}}"
+      ]
+    },
+    {
+      "id": "devops_deployment",
+      "description": "Deployment, containers, CI/CD, rollback, monitoring, and production readiness.",
+      "triggers": [
+        "deploy",
+        "deployment",
+        "Docker",
+        "Compose",
+        "CI/CD",
+        "rollback",
+        "production",
+        "monitoring",
+        "health check"
+      ],
+      "required_skills": [
+        "{{PROGRAMMING_BASELINE_SKILL}}"
+      ],
+      "recommended_skills": [
+        "{{DEPLOYMENT_PATTERNS_SKILL}}",
+        "{{DOCKER_PATTERNS_SKILL}}",
+        "{{SAFETY_GUARD_SKILL}}"
+      ]
+    },
+    {
+      "id": "testing_verification",
+      "description": "Testing, QA, regression checks, browser testing, E2E testing, and verification loops.",
+      "triggers": [
+        "test",
+        "TDD",
+        "QA",
+        "verification",
+        "regression",
+        "E2E",
+        "Playwright",
+        "browser test"
+      ],
+      "required_skills": [
+        "{{PROGRAMMING_BASELINE_SKILL}}"
+      ],
+      "recommended_skills": [
+        "{{TDD_WORKFLOW_SKILL}}",
+        "{{VERIFICATION_LOOP_SKILL}}",
+        "{{BROWSER_QA_SKILL}}",
+        "{{E2E_TESTING_SKILL}}"
+      ]
+    },
+    {
+      "id": "architecture_planning",
+      "description": "System architecture, technical planning, task breakdown, architecture decisions, and design tradeoffs.",
+      "triggers": [
+        "architecture",
+        "plan",
+        "blueprint",
+        "technical design",
+        "ADR",
+        "module split",
+        "system design"
+      ],
+      "required_skills": [],
+      "recommended_skills": [
+        "{{BLUEPRINT_SKILL}}",
+        "{{API_DESIGN_SKILL}}",
+        "{{HEXAGONAL_ARCHITECTURE_SKILL}}",
+        "{{ARCHITECTURE_DECISION_RECORDS_SKILL}}"
+      ]
+    },
+    {
+      "id": "agent_engineering",
+      "description": "AI Agent workflows, agent harnesses, evaluation, multi-agent systems, and tool routing.",
+      "triggers": [
+        "agent",
+        "AI Agent",
+        "multi-agent",
+        "subagent",
+        "evaluation",
+        "harness",
+        "MCP",
+        "tool routing"
+      ],
+      "required_skills": [
+        "{{PROGRAMMING_BASELINE_SKILL}}"
+      ],
+      "recommended_skills": [
+        "{{AGENTIC_ENGINEERING_SKILL}}",
+        "{{EVAL_HARNESS_SKILL}}"
+      ]
+    },
+    {
+      "id": "skill_management",
+      "description": "Skill creation, merging, deduplication, index updates, quick reference updates, and external Skill review.",
+      "triggers": [
+        "skill",
+        "Skill",
+        "create skill",
+        "merge skill",
+        "deduplicate",
+        "skill-index",
+        "quick reference",
+        "GitHub skill"
+      ],
+      "required_skills": [
+        "{{SKILL_GOVERNANCE_SKILL}}"
+      ],
+      "recommended_skills": []
+    }
+  ],
+  "deduplication_policy": {
+    "do_not_create_new_skill_when": [
+      "An existing Skill covers most of the workflow.",
+      "The new requirement is only a branch scenario.",
+      "The name is different but inputs, outputs, and workflow are similar.",
+      "The requirement is only a business-specific version of a general Skill.",
+      "The Skill is unlikely to be reused."
+    ],
+    "create_new_skill_only_when": [
+      "Existing Skills cannot cover the core workflow.",
+      "It is not a small branch of an existing Skill.",
+      "It is likely to be reused.",
+      "It has clear triggers, inputs, outputs, workflow, and avoid conditions."
+    ]
+  }
+}
