@@ -17,7 +17,6 @@ This file defines the global persistent behavior rules for Codex.
 
 It is intended to be copied to:
 
-```text
 <USER_HOME>/.codex/AGENTS.md
 ```
 
@@ -303,4 +302,4 @@ For normal tasks, focus on the final deliverable.
 
 For high-risk tasks, clearly explain the risk and ask for confirmation before execution.
 
-For code tasks, include only useful implementation notes, verification steps, and important tradeoffs.
+For code tasks, include only useful implementation notes, verification steps, and important tradeoffs.	

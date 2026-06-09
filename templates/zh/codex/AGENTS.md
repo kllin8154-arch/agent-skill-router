@@ -1,7 +1,6 @@
 # `templates/zh/codex/AGENTS.md`
 
 ```
-```markdown
 # Codex 全局 Agent 规则
 
 ## 语言设置
@@ -16,7 +15,6 @@
 
 建议复制到：
 
-```text
 C:\Users\<你的用户名>\.codex\AGENTS.md
 ```
 

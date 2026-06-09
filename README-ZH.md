@@ -1,9 +1,6 @@
 # README-ZH.md
 
 ```
-# `README-ZH.md`
-
-```markdown
 # Agent Skill Router
 
 面向 Claude Code、Codex 以及其他编程 Agent 的本地 Skill 路由与治理模板。
@@ -262,8 +259,4 @@ sync-skills.ps1
 ## License
 
 MIT License
-
-```
-
-```
 

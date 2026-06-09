@@ -261,7 +261,3 @@ This repository should contain templates, rules, sanitized examples, and install
 ## License
 
 MIT License
-
-```
-
-```
