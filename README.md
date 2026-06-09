@@ -30,7 +30,7 @@ This project provides a reusable, extensible, and maintainable local template.
 - New Skill admission review
 - Merge similar Skills into branch scenarios
 - Maintain `skill-index.json`
-- Maintain `技能速查手册-ZH.md`
+- Maintain `Skill-Quick-Reference-EN.md`
 - Claude Code and Codex support
 - GitHub external Skill security review workflow
 - Context budget control by avoiding loading all Skills at once
@@ -78,7 +78,7 @@ agent-skill-router/
 │  │  └─ skills/
 │  └─ shared/
 │     ├─ skill-index.json
-│     ├─ 技能速查手册-ZH.md
+│     ├─ Skill-Quick-Reference-EN.md
 │     ├─ skill-governance/
 │     │  └─ SKILL.md
 │     └─ skill-template/
@@ -103,7 +103,7 @@ agent-skill-router/
 | `CLAUDE.md`                    | Global rule entry for Claude Code                            |
 | `AGENTS.md`                    | Global rule entry for Codex                                  |
 | `skill-index.json`             | Machine-readable Skill routing index                         |
-| `技能速查手册-ZH.md`           | Human-readable Skill manual                                  |
+| `Skill-Quick-Reference-EN.md`  | Human-readable Skill manual                                  |
 | `skill-governance/SKILL.md`    | Rules for creating, merging, deduplicating, and maintaining Skills |
 | `skill-template/SKILL.md`      | Standard template for creating a new Skill                   |
 | `karpathy-guidelines/SKILL.md` | Mandatory baseline guidelines for programming agents         |
