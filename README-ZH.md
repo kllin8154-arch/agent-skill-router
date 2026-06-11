@@ -1,10 +1,11 @@
-# Agent Skill Router
+<p align="center">
+  <h1 align="center">Agent Skill Router</h1>
+  <p align="center">面向 Claude Code、Codex 以及其他编程 Agent 的本地 Skill 路由与治理模板 —— 帮助 AI Agent 自动选择合适的 Skill、防止重复创建、减少上下文浪费，并安全审查外部 Skill。</p>
+</p>
 
-面向 Claude Code、Codex 以及其他编程 Agent 的本地 Skill 路由与治理模板。
-
-Agent Skill Router 用于帮助 AI Agent 根据任务类型、角色、技术栈和关键词自动选择合适的本地 Skill，同时提供 Skill 新增、合并、去重、外部 Skill 安全审查等治理规则，避免重复创建、重复加载和上下文浪费。
-
-[English README](./README.md)
+<p align="center">
+  <a href="./README.md">English</a> | <strong>中文</strong>
+</p>
 
 ---
 

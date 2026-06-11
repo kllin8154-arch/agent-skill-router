@@ -1,10 +1,11 @@
-# Agent Skill Router
+<p align="center">
+  <h1 align="center">Agent Skill Router</h1>
+  <p align="center">A local Skill routing and governance template for Claude Code, Codex, and other coding agents — helping AI agents choose the right Skill, prevent duplication, and safely review external Skills.</p>
+</p>
 
-A local Skill routing and governance template for Claude Code, Codex, and other coding agents.
-
-Agent Skill Router helps AI agents choose the right local Skill based on task type, role, tech stack, and keywords. It also provides governance rules to prevent duplicate Skills, reduce context waste, and safely review external Skills before adoption.
-
-[中文文档](./README-ZH.md)
+<p align="center">
+  <strong>English</strong> | <a href="./README-ZH.md">中文</a>
+</p>
 
 ---
 
