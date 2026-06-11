@@ -1,6 +1,3 @@
-# `templates/en/shared/Skill-Quick-Reference-EN.md`
-
-```
 # Skill Quick Reference
 
 This file is a human-readable Skill manual.
@@ -15,7 +12,7 @@ Only use this file when the index is missing, incomplete, or when a human-readab
 ## Core Skill Parameters
 
 | Parameter | Suggested Skill | Purpose |
-|---|---|---|
+|-----------|----------------|---------|
 | `{{PROGRAMMING_BASELINE_SKILL}}` | `karpathy-guidelines` | Mandatory programming baseline |
 | `{{SKILL_GOVERNANCE_SKILL}}` | `skill-governance` | Skill governance and deduplication |
 | `{{DESIGN_SYSTEM_SKILL}}` | `design-system` | UI design systems |
@@ -43,106 +40,61 @@ Only use this file when the index is missing, incomplete, or when a human-readab
 
 ### Any programming task
 
-Use:
-
-```text
+```
 {{PROGRAMMING_BASELINE_SKILL}} + domain Skill + verification or security Skill
 ```
 
 ### UI / Design System
 
-Use:
-
 ```
-{{DESIGN_SYSTEM_SKILL}}
-{{FRONTEND_PATTERNS_SKILL}}
-{{BROWSER_QA_SKILL}}
+{{DESIGN_SYSTEM_SKILL}}  {{FRONTEND_PATTERNS_SKILL}}  {{BROWSER_QA_SKILL}}
 ```
 
-If implementation is required, also use:
-
-```
-{{PROGRAMMING_BASELINE_SKILL}}
-```
+If implementation is required, also use `{{PROGRAMMING_BASELINE_SKILL}}`.
 
 ### Frontend Implementation
 
-Use:
-
 ```
-{{PROGRAMMING_BASELINE_SKILL}}
-{{FRONTEND_PATTERNS_SKILL}}
-{{DESIGN_SYSTEM_SKILL}}
-{{BROWSER_QA_SKILL}}
+{{PROGRAMMING_BASELINE_SKILL}} {{FRONTEND_PATTERNS_SKILL}} {{DESIGN_SYSTEM_SKILL}} {{BROWSER_QA_SKILL}}
 ```
 
 ### Backend / API
 
-Use:
-
 ```
-{{PROGRAMMING_BASELINE_SKILL}}
-{{API_DESIGN_SKILL}}
-{{SECURITY_REVIEW_SKILL}}
+{{PROGRAMMING_BASELINE_SKILL}} {{API_DESIGN_SKILL}} {{SECURITY_REVIEW_SKILL}}
 ```
 
 ### Database
 
-Use:
-
 ```
-{{PROGRAMMING_BASELINE_SKILL}}
-{{DATABASE_MIGRATIONS_SKILL}}
-{{POSTGRES_PATTERNS_SKILL}}
-{{SECURITY_REVIEW_SKILL}}
+{{PROGRAMMING_BASELINE_SKILL}} {{DATABASE_MIGRATIONS_SKILL}} {{POSTGRES_PATTERNS_SKILL}} {{SECURITY_REVIEW_SKILL}}
 ```
 
 ### DevOps / Deployment
 
-Use:
-
 ```
-{{PROGRAMMING_BASELINE_SKILL}}
-{{DEPLOYMENT_PATTERNS_SKILL}}
-{{DOCKER_PATTERNS_SKILL}}
-{{SAFETY_GUARD_SKILL}}
+{{PROGRAMMING_BASELINE_SKILL}} {{DEPLOYMENT_PATTERNS_SKILL}} {{DOCKER_PATTERNS_SKILL}} {{SAFETY_GUARD_SKILL}}
 ```
 
 ### Testing / Verification
 
-Use:
-
 ```
-{{PROGRAMMING_BASELINE_SKILL}}
-{{TDD_WORKFLOW_SKILL}}
-{{VERIFICATION_LOOP_SKILL}}
-{{E2E_TESTING_SKILL}}
+{{PROGRAMMING_BASELINE_SKILL}} {{TDD_WORKFLOW_SKILL}} {{VERIFICATION_LOOP_SKILL}} {{E2E_TESTING_SKILL}}
 ```
 
 ### Architecture / Planning
 
-Use:
-
 ```
-{{BLUEPRINT_SKILL}}
-{{API_DESIGN_SKILL}}
-{{HEXAGONAL_ARCHITECTURE_SKILL}}
-{{ARCHITECTURE_DECISION_RECORDS_SKILL}}
+{{BLUEPRINT_SKILL}} {{API_DESIGN_SKILL}} {{HEXAGONAL_ARCHITECTURE_SKILL}} {{ARCHITECTURE_DECISION_RECORDS_SKILL}}
 ```
 
 ### AI Agent Engineering
 
-Use:
-
 ```
-{{PROGRAMMING_BASELINE_SKILL}}
-{{AGENTIC_ENGINEERING_SKILL}}
-{{EVAL_HARNESS_SKILL}}
+{{PROGRAMMING_BASELINE_SKILL}} {{AGENTIC_ENGINEERING_SKILL}} {{EVAL_HARNESS_SKILL}}
 ```
 
 ### Skill Management
-
-Use:
 
 ```
 {{SKILL_GOVERNANCE_SKILL}}
@@ -156,7 +108,3 @@ Use:
 - Use GitHub only when no local Skill fits.
 - Review external Skills before adopting them.
 - Keep user-facing output focused on the actual task result.
-
-```
-
-```
